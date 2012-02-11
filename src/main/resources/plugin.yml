@@ -1,0 +1,4 @@
+name: BTPay
+main: fr.toobian.bukkit.btpay.BTPayPlugin
+author: Toobian
+version: 1.0

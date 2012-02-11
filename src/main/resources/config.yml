@@ -1,0 +1,8 @@
+pay: 5
+message: 'You receive your salary of :pay: :unit:'
+sql:
+  hostname: localhost
+  port: 3306
+  database: btpay
+  username: btpay
+  password: passbtpay

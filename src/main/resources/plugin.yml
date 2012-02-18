@@ -1,4 +1,8 @@
 name: BTPay
 main: fr.toobian.bukkit.btpay.BTPayPlugin
 author: Toobian
-version: 1.0
+version: 1.1
+permissions:
+  btpay.pay:
+    description: Allows you to receive pay
+    default: true

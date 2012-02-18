@@ -25,9 +25,11 @@ public class BTPayPlugin extends JavaPlugin implements Listener{
     private FileConfiguration config;
     private String hostname, port, database, username, password;
     
+    @Override
     public void onDisable() {
     }
 
+    @Override
     public void onEnable() {
         
         if(!getDataFolder().exists()) {
@@ -48,7 +50,7 @@ public class BTPayPlugin extends JavaPlugin implements Listener{
     
     @EventHandler(priority= EventPriority.LOW)
     public void onPlayerJoin(PlayerJoinEvent event) {
-        if(this.canReceivePay(event.getPlayer().getName())) {
+        if(this.canReceivePay(event.getPlayer().getName()) && event.getPlayer().hasPermission("btpay.pay")) {
             Holdings compte = new Holdings(event.getPlayer().getName());
             double pay = config.getDouble("pay");
             compte.add(pay);
